@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dueno.DocumentoPago"
+    tools:ignore="VectorDrawableCompat">
+
+    <RelativeLayout
+        android:id="@+id/docPagoHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp">
+        <RelativeLayout
+            android:id="@+id/docPagoNavigator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/docPagoAtras"
+                android:background="@drawable/btn_transparent"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="2dip"
+                android:paddingBottom="2dip"
+                app:srcCompat="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/docPagoDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/docPagoAtras"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="4dip"
+                android:text="Importe a pagar"
+                android:textColor="@color/textWhite"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/docPagoTotalContainer"
+            android:layout_below="@+id/docPagoNavigator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginBottom="8dip">
+            <TextView
+                android:id="@+id/docPagoImporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/docPagoEditarImporte"
+                android:layout_centerVertical="true"
+                android:text="S/ 0.00"
+                android:textColor="@color/textWhite"
+                android:textSize="32sp"/>
+            <ImageButton
+                android:id="@+id/docPagoEditarImporte"
+                android:background="@drawable/btn_transparent"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="2dip"
+                android:paddingBottom="2dip"
+                app:srcCompat="@drawable/ic_edit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/docPagoHeader">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dip">
+            <!-- -->
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/docPagoTotalContainer"
+                android:layout_width="270dip"
+                android:layout_height="90dip"
+                android:layout_marginBottom="8dip"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_logo_life"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A continuación, ingresa tus datos para realizar el pago de tu documento. Recuerda que puedes modificar el importe que deseas pagar, usando el botón al lado derecho del importe." />
+            <LinearLayout
+                android:id="@+id/docPagoFormTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dip" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dip">
+                    <LinearLayout
+                        android:layout_toLeftOf="@+id/docPagoLogoTarjeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/docPagoNroTarjetaLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="2dip"
+                            android:text="Número de su tarjeta"
+                            android:textColor="@color/btn_disabled_dark"
+                            android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/docPagoNroTarjeta"
+                            android:background="@drawable/border_default"
+                            android:drawableLeft="@drawable/ic_credit_card"
+                            android:drawablePadding="8dip"
+                            android:hint="Ingrese Nro. de Tarjeta"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2dip"
+                            android:maxLength="16"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/docPagoLogoTarjeta"
+                        android:layout_width="48dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="8dip"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_logo_visa" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dip"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/docPagoMesVenceLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_disabled_dark"
+                            android:text="Mes vence"
+                            android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/docPagoMesVence"
+                            android:background="@drawable/border_default"
+                            android:drawableLeft="@drawable/ic_date"
+                            android:drawablePadding="8dip"
+                            android:hint="Mes"
+                            android:inputType="number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="2dip"
+                            android:maxLength="2"
+                            android:ems="6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/docPagoTarjetaAnioLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_disabled_dark"
+                            android:text="Año vence"
+                            android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/docPagoTarjetaAnio"
+                            android:background="@drawable/border_default"
+                            android:drawableLeft="@drawable/ic_date"
+                            android:drawablePadding="8dip"
+                            android:hint="Año"
+                            android:inputType="number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginVertical="2dip"
+                            android:layout_marginHorizontal="8dip"
+                            android:maxLength="4"
+                            android:ems="6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/docPagoTarjetaCvvLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_disabled_dark"
+                            android:text="CVV"
+                            android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/docPagoTarjetaCvv"
+                            android:background="@drawable/border_default"
+                            android:drawableLeft="@drawable/ic_cvv"
+                            android:drawablePadding="8dip"
+                            android:hint="CVV"
+                            android:inputType="number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:ems="6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/docPagoNombreTitularLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/btn_disabled_dark"
+                        android:text="Titular de la tarjeta"
+                        android:visibility="gone" />
+                    <EditText
+                        android:id="@+id/docPagoNombreTitular"
+                        android:background="@drawable/border_default"
+                        android:drawableLeft="@drawable/ic_people"
+                        android:drawablePadding="8dip"
+                        android:hint="Nombre del titular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="2dip"
+                        android:layout_marginBottom="6dip"
+                        android:maxLength="16"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/docPagoEmailLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/btn_disabled_dark"
+                        android:text="Titular de la tarjeta"
+                        android:visibility="gone" />
+                    <EditText
+                        android:id="@+id/docPagoEmail"
+                        android:background="@drawable/border_default"
+                        android:drawableLeft="@drawable/ic_mail"
+                        android:drawablePadding="8dip"
+                        android:hint="Correo electrónico del titular"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="2dip"
+                        android:layout_marginBottom="6dip"
+                        android:textSize="14sp" />
+                    <Button
+                        android:id="@+id/docPagoPagoTarjeta"
+                        android:background="@drawable/btn_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dip"
+                        android:text="Pagar el documento ahora"
+                        android:textColor="@color/textWhite"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/kind_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="24dip"
+                    android:text="* Te recordamos que LifeApp no almacena los datos de tu tarjeta de crédito, tal como se indica en nuestra política de protección de datos personales, la cual podrás ver pulsando el siguiente botón."
+                    android:textColor="@color/textHighlight"/>
+                <Button
+                    android:id="@+id/docPagoPoliticaDatos"
+                    android:background="@drawable/btn_cyan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dip"
+                    android:minHeight="0dip"
+                    android:minWidth="0dip"
+                    android:padding="6dip"
+                    android:text="Política de protección de datos personales"
+                    android:textColor="@color/btn_white_light"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

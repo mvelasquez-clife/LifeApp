@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dependientes.IngresoDependiente">
+    <RelativeLayout
+        android:id="@+id/DepIngresoHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="8dip">
+        <ImageView
+            android:id="@+id/DepIngresoLogo"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_logo"/>
+        <TextView
+            android:layout_toRightOf="@+id/DepIngresoLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dip"
+            android:text="Ingreso de dependientes"
+            android:textColor="@color/textWhite"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/DepIngresoHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="8dip"
+        android:paddingHorizontal="16dip">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dip"
+            android:text="Para acceder a LifeApp, tu dependiente debe generar tu código de acceso desde su teléfono o tablet. Una vez hecho, deberás leer el código QR que aparecerá en su pantalla con la cámara de tu dispositivo. Para ello, pulsa el botón 'Capturar mi código de acceso'."
+            android:textAlignment="gravity"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="256dip"
+            android:layout_height="192dip"
+            android:layout_margin="8dip"
+            android:src="@mipmap/ic_read_qr"/>
+        <Button
+            android:id="@+id/DepIngresoCapturar"
+            android:background="@drawable/btn_primary"
+            android:elevation="1dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dip"
+            android:layout_marginTop="16dip"
+            android:padding="12dip"
+            android:text="Capturar mi código de acceso"
+            android:textAllCaps="false"
+            android:textColor="@color/textWhite"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/DepIngresoSalir"
+            android:background="@drawable/btn_white"
+            android:elevation="1dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dip"
+            android:layout_marginTop="8dip"
+            android:padding="8dip"
+            android:text="Salir de LifeApp"
+            android:textAllCaps="false"
+            android:textColor="@color/textHighlight"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

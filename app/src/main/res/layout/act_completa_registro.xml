@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro.CompletaRegistro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="144dip"
+                android:layout_marginTop="32dip"
+                android:layout_marginBottom="12dip"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text=" "></TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/ic_logo_dark"
+                    tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text=" "></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dip"
+                android:text="¡Registro completado!"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dip"
+                android:text="Se ha enviado un mail de validación a la dirección de correo electrónico que ingresaste:"
+                android:textAlignment="center"
+                android:textColor="@color/textHighlight"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/RegistroCompletoCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dip"
+                android:text="correo@servidor.com"
+                android:textAlignment="center"
+                android:textColor="@color/btn_blue_light"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dip"
+                android:text="Haz clic en el enlace proporcionado en el correo para comenzar a utilizar Life App. ¡Muchas gracias!"
+                android:textAlignment="center"
+                android:textColor="@color/textHighlight"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/RegistroCompletoLogin"
+                android:background="@drawable/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ir al Login"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_white_light"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

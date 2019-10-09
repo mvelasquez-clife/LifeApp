@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InicioLocalNuevoDependiente"
+    tools:ignore="VectorDrawableCompat">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@mipmap/bg_profile"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:gravity="center_horizontal|bottom"
+                android:padding="12dip"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_margin="8dip">
+                    <android.support.v7.widget.CardView
+                        android:background="@color/textWarning"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        android:elevation="12dip"
+                        android:id="@+id/view2"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        android:thicknessRatio="1.9"
+                        app:cardCornerRadius="60dp">
+                        <ImageView
+                            android:layout_height="120dip"
+                            android:layout_width="match_parent"
+                            android:id="@+id/NvoDepImagenPerfil"
+                            android:src="@drawable/ic_profile_h"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+                        </ImageView>
+                    </android.support.v7.widget.CardView>
+                    <ImageButton
+                        android:id="@+id/NvoDepEditarImg"
+                        android:background="@drawable/btn_transparent"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:elevation="16dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="fitCenter"
+                        android:padding="2dip"
+                        app:srcCompat="@drawable/ic_camera" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar nuevo dependiente"
+                    android:textAlignment="center"
+                    android:textColor="@color/textWhite"
+                    android:textSize="16dip" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A continuación, ingrese los datos"
+                    android:textAlignment="center"
+                    android:textColor="@color/textWhite"
+                    android:textSize="12dip" />
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dip"
+                android:paddingVertical="12dip">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dip">
+                    <TextView
+                        android:id="@+id/NvoDepLblLocal"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Local"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <Spinner
+                        android:id="@+id/NvoDepLocal"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/NvoDepLblLocal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Spinner>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="Datos del dependiente"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoDepLblDni"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Nro. DNI"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepDni"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:layout_toRightOf="@+id/NvoDepLblDni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoDepLblNombres"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Nombres"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepNombres"
+                        android:layout_toRightOf="@+id/NvoDepLblNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoDepLblApepat"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Ape. Pat."
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepApepat"
+                        android:layout_toRightOf="@+id/NvoDepLblApepat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoDepLblApemat"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Ape. Mat."
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepApemat"
+                        android:layout_toRightOf="@+id/NvoDepLblApemat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginTop="18dip"
+                    android:text="Información de contacto"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoDepLblEmail"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="e-mail"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepEmail"
+                        android:inputType="textEmailAddress"
+                        android:layout_toRightOf="@+id/NvoDepLblEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dip">
+                    <TextView
+                        android:id="@+id/NvoDepLblTelefono"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Teléfono"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoDepTelefono"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:layout_toRightOf="@+id/NvoDepLblTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/NvoDepBtnGuardar"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="1dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Registrar el dependiente"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textWhite"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/NvoDepCancelar"
+                    android:background="@drawable/btn_white"
+                    android:elevation="1dip"
+                    android:minHeight="0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dip"
+                    android:padding="8dip"
+                    android:text="Cancelar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

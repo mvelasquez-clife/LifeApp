@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frg_dueno.Inicio">
+
+    <RelativeLayout
+        android:id="@+id/frgInicioHeader"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dip">
+
+        <ImageView
+            android:id="@+id/frgInicioLogo"
+            android:layout_centerVertical="true"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_logo" />
+        <!--Spinner
+            android:id="@+id/frgInicioLocal"
+            android:layout_toRightOf="@+id/frgInicioLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textWhite"></Spinner-->
+        <TextView
+            android:id="@+id/frgTvInicioLocal"
+            android:layout_toRightOf="@+id/frgInicioLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="8dip"
+            android:textColor="@color/textWhite" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/frgInicioHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dip">
+            <TextView
+                android:id="@+id/frgInicioNombre"
+                android:layout_width="match_parent"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.mvelasquezp.clife.clientes.controls.Circle
+                    android:id="@+id/frgInicioCircle"
+                    android:layout_width="240dip"
+                    android:layout_height="240dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="16dip"
+                    app:circleBackgroundColor="@color/colorCicleActive"
+                    app:circleStrokeWidth="4dip" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahora tienes"
+                        android:textColor="@color/textMuted"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/frgInicioPuntaje"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 puntos"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="por repartir"
+                        android:textColor="@color/textMuted"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+
+                    <TextView
+                        android:id="@+id/FrgInicioCantidadLocales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingHorizontal="4dip"
+                        android:text="0"
+                        android:textColor="@color/btn_green_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/FrgInicioCantidadLocales"
+                        android:layout_toLeftOf="@+id/FrgInicioVerLocales"
+                        android:text="local(es)"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp"/>
+                    <Button
+                        android:id="@+id/FrgInicioVerLocales"
+                        android:background="@drawable/btn_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:minHeight="0dip"
+                        android:minWidth="0dip"
+                        android:paddingVertical="4dip"
+                        android:paddingHorizontal="12dip"
+                        android:text="Ver"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textWhite"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dip">
+                    <TextView
+                        android:id="@+id/FrgInicioCantidadDependientes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:paddingHorizontal="4dip"
+                        android:text="0"
+                        android:textColor="@color/btn_green_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/FrgInicioCantidadDependientes"
+                        android:layout_toLeftOf="@+id/FrgInicioVerDependientes"
+                        android:text="dependiente(s)"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp"/>
+                    <Button
+                        android:id="@+id/FrgInicioVerDependientes"
+                        android:background="@drawable/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:minHeight="0dip"
+                        android:minWidth="0dip"
+                        android:paddingVertical="4dip"
+                        android:paddingHorizontal="12dip"
+                        android:text="Ver"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textWhite"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+                <!-- -->
+                <Button
+                    android:id="@+id/FrgInicioRepartir"
+                    android:background="@drawable/btn_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Repartir puntos a mis locales"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textWhite" />
+
+                <Button
+                    android:id="@+id/FrgInicioAsignar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/btn_white"
+                    android:elevation="1dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Asignar puntos a un dependiente"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHighlight"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

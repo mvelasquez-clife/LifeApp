@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dip">
+
+    <ImageView
+        android:id="@+id/CtrlMensajeIcono"
+        android:layout_width="28dip"
+        android:layout_height="28dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="4dip"
+        android:padding="4dip"
+        app:srcCompat="@drawable/ic_unread"
+        tools:ignore="VectorDrawableCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/CtrlMensajeIcono"
+        android:layout_toLeftOf="@+id/CtrlMensajeBoton"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/CtrlMensajeTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título del mensaje"
+            android:textColor="@color/textHighlight"
+            android:textSize="16sp"></TextView>
+        <TextView
+            android:id="@+id/CtrlMensajeFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título del mensaje"
+            android:textColor="@color/textMuted"
+            android:textSize="14sp"></TextView>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/CtrlMensajeBoton"
+        android:background="@drawable/btn_transparent"
+        android:layout_width="36dip"
+        android:layout_height="36dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dip"
+        android:scaleType="fitCenter"
+        android:padding="2dip"
+        android:src="@drawable/ic_notificacion_dark" />
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro.DatosContacto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip">
+                    <ImageView
+                        android:id="@+id/DatosContactoLogo"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_logo_dark"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/DatosContactoLogo"
+                        android:text="Bienvenido a Life App"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/DatosContactoRazonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/DatosContactoNombreComercial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="-"
+                    android:textColor="@color/textMuted"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/DatosContactoDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="-"
+                    android:textColor="@color/btn_cyan_dark"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dip">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dip"
+                    android:text="A continuación, confirma tus datos personales"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="e-mail"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/DatosContactoEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:hint="Ingresa tu correo electrónico"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="16sp" />
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teléfono"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/DatosContactoTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Ingresa tu número telefónico"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="16sp" />
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de cumpleaños"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <EditText
+                        android:id="@+id/DatosContactoCumpleanios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:hint="Tu fecha de cumpleaños"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="16sp" />
+                    <ImageButton
+                        android:id="@+id/DatosContactoDatePicker"
+                        android:background="@drawable/btn_primary"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/DatosContactoCumpleanios"
+                        android:src="@drawable/ic_cumpleanios"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa una contraseña"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/DatosContactoClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Debe tener mayúsculas, minúsculas y números"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="16sp" />
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Repite tu contraseña"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/DatosContactoClaveRepite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Vuelve a ingresar la contraseña"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- -->
+            <Button
+                android:id="@+id/DatosContactoConfirmar"
+                android:background="@drawable/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dip"
+                android:minHeight="0dip"
+                android:padding="8dip"
+                android:text="Confirmar datos"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_white_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

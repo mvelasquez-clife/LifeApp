@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InicioLocalNuevo">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@mipmap/bg_salon"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:gravity="center_horizontal|bottom"
+                android:padding="12dip"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_margin="8dip">
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar nuevo local"
+                    android:textAlignment="center"
+                    android:textColor="@color/textWhite"
+                    android:textSize="16dip" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A continuación, ingrese los datos"
+                    android:textAlignment="center"
+                    android:textColor="@color/textWhite"
+                    android:textSize="12dip" />
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dip"
+                android:paddingVertical="12dip">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="Datos del local"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/NvoLocalLblNombre"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Nombre"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoLocalNombre"
+                        android:inputType="text"
+                        android:layout_toRightOf="@+id/NvoLocalLblNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dip">
+                    <TextView
+                        android:id="@+id/NvoLocalLblDireccion"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="8dip"
+                        android:text="Dirección"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:id="@+id/NvoLocalDireccion"
+                        android:inputType="text"
+                        android:layout_toRightOf="@+id/NvoLocalLblDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/NvoDepBtnGuardar"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="1dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Registrar el local"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textWhite"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/NvoDepCancelar"
+                    android:background="@drawable/btn_white"
+                    android:elevation="1dip"
+                    android:minHeight="0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dip"
+                    android:padding="8dip"
+                    android:text="Cancelar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

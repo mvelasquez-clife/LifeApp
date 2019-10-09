@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mvelasquezp.clife.clientes">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.Notificaciones"></activity>
+        <activity android:name=".registro.CompletaRegistro" />
+        <activity
+            android:name=".registro.DatosContacto"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".registro.PoliticaDatos" />
+        <activity
+            android:name=".registro.IngresaRucDni"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activities.CuentaLogros" />
+        <activity android:name=".dueno.PedidoCalifica" />
+        <activity android:name=".activities.PromocionCanje" />
+        <activity android:name=".activities.PuntosAsignar" />
+        <activity android:name=".activities.PuntosListaLocales" />
+        <activity android:name=".dependientes.RecibirPuntaje" />
+        <activity android:name=".dependientes.InicioAdministrador" />
+        <activity android:name=".dependientes.InicioDependiente" />
+        <activity android:name=".dependientes.IngresoDependiente" />
+        <activity android:name=".activities.InicioLocalesDependientesDetalle" />
+        <activity android:name=".activities.InicioLocalNuevo" />
+        <activity android:name=".activities.HTMLViewer" />
+        <activity
+            android:name=".activities.InicioLocalNuevoDependiente"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name=".activities.InicioLocalesDependientes" />
+        <activity android:name=".activities.InicioLocales" />
+        <activity
+            android:name=".dueno.DocumentoPago"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name=".dueno.DocumentoDetalle" />
+        <activity android:name=".activities.PromocionDetalle" />
+        <activity android:name=".activities.Prueba" />
+        <activity android:name=".activities.Main" />
+        <activity android:name=".activities.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- providers -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+</manifest>

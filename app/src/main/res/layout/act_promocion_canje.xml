@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PromocionCanje"
+    tools:ignore="VectorDrawableCompat">
+    <RelativeLayout
+        android:id="@+id/promCanjeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp">
+        <ImageButton
+            android:id="@+id/promCanjeAtras"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="36dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:padding="8dip"
+            app:srcCompat="@drawable/ic_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/promCanjeAtras"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dip"
+            android:text="Canje de premios"
+            android:textColor="@color/textWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/promCanjeHeader">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="4dip"
+            android:paddingHorizontal="8dip">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblProducto"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Producto"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/promCanjeProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/promCanjeLblProducto"
+                    android:text="-"
+                    android:textColor="@color/textTitle"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblCosto"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Costo"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/promCanjeCosto"
+                    android:layout_width="303dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/promCanjeLblCosto"
+                    android:text="-"
+                    android:textColor="@color/textDanger"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblDisponible"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Disponible"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/promCanjeDisponible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/promCanjeLblDisponible"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/textTitle"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblSaldo"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Saldo final"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/promCanjeSaldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/promCanjeLblSaldo"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/textTitle"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <!-- -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:layout_marginBottom="4dip"
+                android:text="Datos de envío"
+                android:textColor="@color/textMuted"
+                android:textSize="14sp" />
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dip"
+                android:layout_marginTop="4dip"
+                android:layout_marginBottom="0dip">
+                <TextView
+                    android:id="@+id/promCanjeLblDireccion"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Dirección de envío"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/promCanjeDireccion"
+                    android:editable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/promCanjeLblDireccion"
+                    android:hint="Dirección para envío del premio"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dip"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblDescDireccion"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/promCanjeLblDescDireccion"
+                    android:text="El premio será enviado a su lugar de trabajo"
+                    android:textColor="#404040"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+            <!-- -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip">
+                <TextView
+                    android:id="@+id/promCanjeLblTelefono"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Teléfono de contacto"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/promCanjeTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/promCanjeLblTelefono"
+                    android:hint="Ingrese nro. de teléfono"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <!-- -->
+            <Button
+                android:id="@+id/promCanjeReclamar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dip"
+                android:background="@drawable/btn_blue"
+                android:minHeight="0dip"
+                android:padding="10dip"
+                android:text="Reclamar premio ahora"
+                android:textAllCaps="false"
+                android:textColor="@color/textWhite" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

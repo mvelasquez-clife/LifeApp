@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:top="-3dip"
+        android:left="-3dip"
+        android:right="-3dip">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dip"
+                android:color="@color/btn_green_light" />
+            <solid android:color="#00000000" />
+            <padding
+                android:top="12dip"
+                android:left="8dip"
+                android:right="8dip"
+                android:bottom="12dip"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dueno.PedidoCalifica"
+    tools:ignore="VectorDrawableCompat">
+    <RelativeLayout
+        android:id="@+id/pedidoCalificaHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp">
+        <ImageButton
+            android:id="@+id/pedidoCalificaAtras"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="36dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:padding="8dip"
+            app:srcCompat="@drawable/ic_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pedidoCalificaAtras"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dip"
+            android:text="Califica tu pedido"
+            android:textColor="@color/textWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/pedidoCalificaTitulo"
+        android:layout_below="@+id/pedidoCalificaHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="144dip"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/bg_califica" />
+        <TextView
+            android:id="@+id/pedidoCalificaDocumento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dip"
+            android:paddingTop="8dip"
+            android:paddingHorizontal="16dip"
+            android:text="Pedido -"
+            android:textColor="@color/colorCicleActive"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!-- -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pedidoCalificaTitulo">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/pedidoCalificaFormulario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="8dip"
+                android:paddingHorizontal="16dip">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblVendedor"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Vendedor"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaVendedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblVendedor"
+                        android:text="-"
+                        android:textColor="@color/textTitle"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblFecha"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Fecha"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblFecha"
+                        android:text="-"
+                        android:textColor="@color/textTitle"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblImporte"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Importe"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaImporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblImporte"
+                        android:text="-"
+                        android:textColor="@color/textTitle"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <!-- -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:layout_marginBottom="8dip"
+                    android:text="Sobre tu compra ¿Cómo calificarías lo siguiente?"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblPtsVendedor"
+                        android:layout_width="120dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="A tu vendedor"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <SeekBar
+                        android:id="@+id/pedidoCalificaPtsVendedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/pedidoCalificaNumPtsVendedor"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblPtsVendedor"
+                        android:min="1"
+                        android:max="5"
+                        android:progress="1" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaNumPtsVendedor"
+                        android:layout_width="24dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="1"
+                        android:textColor="@color/textDanger"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblPtsEnvio"
+                        android:layout_width="120dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="El envío de tu pedido"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <SeekBar
+                        android:id="@+id/pedidoCalificaPtsEnvio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/pedidoCalificaNumPtsEnvio"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblPtsEnvio"
+                        android:min="1"
+                        android:max="5"
+                        android:progress="1" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaNumPtsEnvio"
+                        android:layout_width="24dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="1"
+                        android:textColor="@color/textDanger"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblPtsProductos"
+                        android:layout_width="120dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Los productos"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <SeekBar
+                        android:id="@+id/pedidoCalificaPtsProductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/pedidoCalificaNumPtsProductos"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblPtsProductos"
+                        android:min="1"
+                        android:max="5"
+                        android:progress="1" />
+                    <TextView
+                        android:id="@+id/pedidoCalificaNumPtsProductos"
+                        android:layout_width="24dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="1"
+                        android:textColor="@color/textDanger"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip">
+                    <TextView
+                        android:id="@+id/pedidoCalificaLblComentarios"
+                        android:layout_width="120dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="¿Algún comentario adicional?"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <EditText
+                        android:id="@+id/pedidoCalificaComentarios"
+                        android:inputType="textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/pedidoCalificaLblComentarios"
+                        android:lines="3"
+                        android:text="-"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <!-- -->
+                <Button
+                    android:id="@+id/pedidoCalificaPagar"
+                    android:background="@drawable/btn_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Guardar mi calificación"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textWhite"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/pedidoCalificaCalificado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dip"
+                android:paddingVertical="4dip"
+                android:text="El pedido ya fue calificado"
+                android:textColor="@color/textHighlight"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dip"
+                android:paddingVertical="8dip">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detalle del pedido"
+                    android:textColor="@color/textTitle"
+                    android:textSize="16sp" />
+                <LinearLayout
+                    android:id="@+id/pedidoCalificaDetallePedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

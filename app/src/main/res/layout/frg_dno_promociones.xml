@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frg_dueno.Promociones">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dip"
+                android:paddingLeft="16dip"
+                android:paddingTop="16dip"
+                android:paddingRight="16dip"
+                android:text="Premios disponibles" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/textHighlight"
+                android:layout_marginBottom="16dip"
+                android:paddingLeft="16dip"
+                android:paddingTop="16dip"
+                android:textSize="14sp"
+                android:text="A continuación, te mostramos los premios que podrás canjear con tus puntos Life!" />
+            <!-- -->
+            <LinearLayout
+                android:id="@+id/frgPromocionesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dueno.DocumentoDetalle"
+    tools:ignore="VectorDrawableCompat">
+    <RelativeLayout
+        android:id="@+id/docdetHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp">
+        <ImageButton
+            android:id="@+id/docdetAtras"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="36dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:padding="8dip"
+            app:srcCompat="@drawable/ic_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/docdetAtras"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dip"
+            android:text="Detalle del documento"
+            android:textColor="@color/textWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/docdetHeader">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/promdetImage"
+                android:layout_width="match_parent"
+                android:layout_height="144dip"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/pago" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingBottom="8dip">
+                <TextView
+                    android:id="@+id/promdetTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/promdetCompartir"
+                    android:layout_marginBottom="16dip"
+                    android:text="F010-36921"
+                    android:textColor="@color/colorCicleActive"
+                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dip"
+                        android:layout_height="wrap_content"
+                        android:text="Importe total"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/promdetImporte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S/ 1,024.64"
+                        android:textColor="@color/textSuccess"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dip"
+                        android:layout_height="wrap_content"
+                        android:text="Saldo actual"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/promdetSaldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S/ 128.32"
+                        android:textColor="@color/textDanger"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dip"
+                        android:layout_height="wrap_content"
+                        android:text="Vencimiento"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/promdetFvence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20-04-2019"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- -->
+                <TextView
+                    android:id="@+id/docdetLabelDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="Detalle de los pagos"
+                    android:textColor="@color/textMuted"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:id="@+id/docdetPagos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dip"
+                    android:orientation="vertical"></LinearLayout>
+                <Button
+                    android:id="@+id/docdetPagar"
+                    android:background="@drawable/btn_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Pagar este documento"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textWhite"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

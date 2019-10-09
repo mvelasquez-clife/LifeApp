@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dip">
+    <TextView
+        android:id="@+id/ctrDocpagoDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ctrDocpagoImporte"
+        android:layout_centerVertical="true"
+        android:text="Pago en efectivo, el 10-02-2019"
+        android:textColor="@color/textHighlight"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/ctrDocpagoImporte"
+        android:layout_width="90dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="S/ 1,000.00"
+        android:textAlignment="textEnd"
+        android:textColor="@color/textTitle"
+        android:textSize="14sp" />
+</RelativeLayout>

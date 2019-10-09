@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dip"
+    tools:ignore="VectorDrawableCompat">
+
+    <ImageView
+        android:id="@+id/ctrListaImagen"
+        android:layout_width="48dip"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_picture"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ctrListaImagen"
+        android:layout_toLeftOf="@+id/ctrListaAction"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ctrListaTprim"
+                android:layout_toLeftOf="@+id/ctrListaTsec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="2dip"
+                android:layout_marginRight="4dip"
+                android:textColor="@color/textTitle"
+                android:textSize="14sp"
+                android:text="Nombre de la promoción" />
+            <TextView
+                android:id="@+id/ctrListaTsec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/textWarning"
+                android:textSize="10sp"
+                android:text="XYXW pts." />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/ctrListaTbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resumen datos de la promoción"
+            android:textColor="@color/textHighlight"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ctrListaAction"
+        android:background="@drawable/btn_transparent"
+        android:layout_width="21dip"
+        android:layout_height="48dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_right_arrow" />
+</RelativeLayout>

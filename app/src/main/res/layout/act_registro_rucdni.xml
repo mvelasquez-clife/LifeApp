@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro.IngresaRucDni">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="24dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="196dip"
+                android:layout_marginBottom="16dip"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:text=" "></TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    app:srcCompat="@drawable/ic_logo_dark"
+                    tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:text=" "></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dip">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="Bienvenido a LifeApp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recuerda que para darte de alta en LifeApp, debes ser cliente de Corporación Life. Ingresa tu RUC o DNI para validar tus datos."
+                    android:textAlignment="center"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dip"
+                android:paddingVertical="8dip">
+                <EditText
+                    android:id="@+id/RegistroRucDniNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/RegistroRucDniBusca"
+                    android:hint="Ingrese su RUC o DNI"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+                <ImageButton
+                    android:id="@+id/RegistroRucDniBusca"
+                    android:background="@drawable/btn_white"
+                    android:layout_width="36dip"
+                    android:layout_height="36dip"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_search"
+                    android:padding="4dip"></ImageButton>
+            </RelativeLayout>
+            <!-- -->
+            <LinearLayout
+                android:id="@+id/RegistroClienteEncontrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dip"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="¡Cliente encontrado!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/RegistroRazonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:text="Razon social del cliente"
+                    android:textColor="@color/textHighlight"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/RegistroDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dip"
+                    android:text="Dirección del cliente"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+                <Button
+                    android:id="@+id/RegistroIniciar"
+                    android:background="@drawable/btn_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Iniciar registro"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_white_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:id="@+id/RegistroClienteExiste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dip"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="¡Lo sentimos!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:text="Hemos detectado que ya formas parte de Life App. Utiliza el siguiente botón para ingresar con tus datos." />
+                <Button
+                    android:id="@+id/RegistroLogin"
+                    android:background="@drawable/btn_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Ingresar a LifeApp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:id="@+id/RegistroClienteNoEncontrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dip"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:text="¡Lo sentimos!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:text="Para darte de alta en LifeApp, debes ser cliente de Corporacion Life S.A.C." />
+                <Button
+                    android:id="@+id/RegistroCancela"
+                    android:background="@drawable/btn_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:minHeight="0dip"
+                    android:padding="8dip"
+                    android:text="Cerrar Life App"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

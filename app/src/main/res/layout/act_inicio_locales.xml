@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InicioLocales"
+    tools:ignore="VectorDrawableCompat">
+    <RelativeLayout
+        android:id="@+id/InicioLocalesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp">
+        <ImageButton
+            android:id="@+id/InicioLocalesAtras"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="36dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:padding="8dip"
+            app:srcCompat="@drawable/ic_back" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/InicioLocalesNuevo"
+            android:layout_toRightOf="@+id/InicioLocalesAtras"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dip"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Locales registrados"
+                android:textColor="@color/textWhite"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/InicioLocalesNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/textWhite"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/InicioLocalesNuevo"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="40dip"
+            android:layout_height="36dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:padding="10dip"
+            app:srcCompat="@drawable/ic_add" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/InicioLocalesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/InicioLocalesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</RelativeLayout>

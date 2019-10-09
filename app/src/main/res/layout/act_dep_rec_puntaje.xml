@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dip"
+    tools:context=".dependientes.RecibirPuntaje">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dip"
+        android:text="Recibir puntos"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Gracias por tu buen desempeño!\nCada vez que consigas vender alguno de los productos promocionales, deberás mostrar tu código de dependiente al encargado de tu local para recibir puntos.\n¡Acumula suficientes puntos y podrás canjear alguno de los premios que tenemos para ti!"
+        android:textColor="@color/textHighlight"
+        android:textAlignment="gravity"
+        android:textSize="14sp" />
+    <ImageView
+        android:id="@+id/RecPuntosQr"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_marginVertical="16dip"
+        android:src="@drawable/ic_logo"/>
+    <Button
+        android:id="@+id/RecPuntosBtnVolver"
+        android:background="@drawable/btn_primary"
+        android:elevation="1dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dip"
+        android:minHeight="0dip"
+        android:padding="8dip"
+        android:text="Volver a ver mis puntos"
+        android:textAllCaps="false"
+        android:textColor="@color/textWhite"
+        android:textSize="14sp" />
+</LinearLayout>
