@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--string name="base_url">http://192.168.1.80/app-clientes/public/api/app-life/</string>
-    <string name="privacy_url">http://192.168.1.80/app-clientes/public/extras/politica-privacidad</string-->
+    <!--string name="base_url">http://192.168.11.138/clientes/public/api/app-life/</string>
+    <string name="privacy_url">http://192.168.11.138/clientes/public/extras/politica-privacidad</string-->
     <string name="base_url">http://webpedidos.corporacionlife.com.pe/app-clientes/api/app-life/</string>
     <string name="privacy_url">http://webpedidos.corporacionlife.com.pe/app-clientes/extras/politica-privacidad</string>
     <string name="login">login</string>
