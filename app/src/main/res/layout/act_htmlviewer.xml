@@ -6,9 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.HTMLViewer">
-
-    <WebView
-        android:id="@+id/webView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+        <ImageButton
+            android:id="@+id/HtmlViewerClose"
+            android:background="@drawable/btn_transparent"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_margin="8dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/ic_close"
+            android:scaleType="fitCenter"
+            android:padding="0dip"
+            android:visibility="gone"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

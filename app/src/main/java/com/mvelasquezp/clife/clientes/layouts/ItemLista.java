@@ -57,6 +57,10 @@ public class ItemLista extends RelativeLayout {
         ctrListaTbottom.setTextColor(getResources().getColor(R.color.textMuted));
     }
 
+    public void ResaltaTprim () {
+        ctrListaTprim.setTextColor(getResources().getColor(R.color.btn_red_light));
+    }
+
     public void resaltarTsec(int color) {
         ctrListaTsec.setTextColor(getResources().getColor(color));
     }

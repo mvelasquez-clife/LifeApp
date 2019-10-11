@@ -105,7 +105,7 @@ public class DatosContacto extends AppCompatActivity implements Asynchtask, View
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Guardar mis datos")
                         .setMessage("¿Deseas guardar los datos ingresados?")
-                        .setPositiveButton("Si, salir", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Si, guardar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 GuardarDatosCliente();

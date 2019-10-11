@@ -28,11 +28,12 @@ public class DocumentoDetalle extends AppCompatActivity implements View.OnClickL
 
     ImageButton docdetAtras;
     LinearLayout docdetPagos;
-    TextView promdetTitulo, promdetImporte, promdetSaldo, promdetFvence, docdetLabelDetalle;
+    TextView promdetTitulo, promdetImporte, promdetSaldo, promdetFvence, docdetLabelDetalle, promdetNvendedor;
     Button docdetPagar;
 
     String documento;
     String vendedor;
+    String nvendedor;
     double SaldoDocumento;
 
     @Override
@@ -106,10 +107,12 @@ public class DocumentoDetalle extends AppCompatActivity implements View.OnClickL
         promdetImporte = (TextView) findViewById(R.id.promdetImporte);
         promdetSaldo = (TextView) findViewById(R.id.promdetSaldo);
         promdetFvence = (TextView) findViewById(R.id.promdetFvence);
+        promdetNvendedor = (TextView) findViewById(R.id.promdetNvendedor);
         docdetLabelDetalle = (TextView) findViewById(R.id.docdetLabelDetalle);
         docdetPagar = (Button) findViewById(R.id.docdetPagar);
         documento = getIntent().getStringExtra("documento");
         vendedor = getIntent().getStringExtra("vendedor");
+        nvendedor = getIntent().getStringExtra("nvendedor");
         promdetTitulo.setText(documento);
         //
         docdetPagar.setOnClickListener(this);
@@ -153,6 +156,7 @@ public class DocumentoDetalle extends AppCompatActivity implements View.OnClickL
         promdetImporte.setText(String.format("%,.2f", tImporte));
         promdetSaldo.setText(String.format("%,.2f", tSaldo));
         promdetFvence.setText(tVence);
+        promdetNvendedor.setText(nvendedor);
         SaldoDocumento = tSaldo;
     }
 

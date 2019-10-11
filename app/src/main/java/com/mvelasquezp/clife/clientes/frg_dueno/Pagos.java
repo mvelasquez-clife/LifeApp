@@ -82,11 +82,18 @@ public class Pagos extends Fragment implements Asynchtask {
                             JSONObject iDocumento = jsDocumentos.getJSONObject(i);
                             final String iCodigoFactura = iDocumento.getString("co_documento");
                             final String iCodigoVendedor = iDocumento.getString("cadena");
+                            final String iNombreVendedor = iDocumento.getString("de_vendedor");
                             double iImporteFactura = Double.parseDouble(iDocumento.getString("im_saldo"));
                             ItemLista item = new ItemLista(getContext());
                                 item.setImageVisible(false);
-                                String descripcion = "Fecha emisión " + iDocumento.getString("fecha_char") + ", vence el " + iDocumento.getString("fec_venc");
-                                item.setLabels(iDocumento.getString("co_documento"), "Deuda: S/ " + String.format("%,.2f", iImporteFactura), descripcion);
+                                String descripcion = "Fecha emisión " + iDocumento.getString("fecha_char") + "\nVendedor: " + iDocumento.getString("de_vendedor") + "\n" + iDocumento.getString("de_cond_pago") + ", vence el " + iDocumento.getString("fec_venc");
+                                String codocumento = iDocumento.getString("co_documento");
+                                int dias_vencido = iDocumento.getInt("nu_dias_vencido");
+                                if (dias_vencido > 0) {
+                                    codocumento += (" - " + dias_vencido + " día(s) vencido");
+                                    if (dias_vencido > 60) item.ResaltaTprim();
+                                }
+                                item.setLabels(codocumento, "Deuda: S/ " + String.format("%,.2f", iImporteFactura), descripcion);
                                 if(iDocumento.getString("cadena").equals("S")) {
                                     item.resaltarTsec(R.color.textDanger);
                                 }
@@ -99,6 +106,7 @@ public class Pagos extends Fragment implements Asynchtask {
                                         Intent IntentDocumentDetalle = new Intent(getContext(), DocumentoDetalle.class);
                                             IntentDocumentDetalle.putExtra("documento", iCodigoFactura);
                                             IntentDocumentDetalle.putExtra("vendedor", iCodigoVendedor);
+                                            IntentDocumentDetalle.putExtra("nvendedor", iNombreVendedor);
                                         startActivityForResult(IntentDocumentDetalle, Constantes.REQUEST_DETALLE_DOCUMENTO);
                                     }
                                 });

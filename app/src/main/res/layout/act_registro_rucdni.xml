@@ -66,6 +66,7 @@
                 android:paddingVertical="8dip">
                 <EditText
                     android:id="@+id/RegistroRucDniNumero"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"

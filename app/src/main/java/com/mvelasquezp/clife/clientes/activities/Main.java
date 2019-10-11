@@ -81,13 +81,14 @@ public class Main extends AppCompatActivity implements BottomNavigationView.OnNa
             bottomNavigation.setSelectedItemId(R.id.navigation_pedidos);
         }
         //lanza el banner publicitario
-        if (!sesion.isPublicidad()) {
+        /*if (!sesion.isPublicidad()) {
             sesion.setPublicidad(true);
-            sHelper.saveSession(sesion);
+            sHelper.saveSession(sesion);*/
             Intent IntentPublicidad = new Intent(Main.this, HTMLViewer.class);
-                IntentPublicidad.putExtra("url", "http://192.168.11.138/clientes/public/extras/campania/1");
+                IntentPublicidad.putExtra("url", "http://192.168.1.80/app-clientes/public/extras/campania/1");
+                IntentPublicidad.putExtra("button", "S");
                 //IntentPublicidad.putExtra("url", "http://webpedidos.corporacionlife.com.pe/clientes/extras/campania/1");
             startActivity(IntentPublicidad);
-        }
+        //}
     }
 }

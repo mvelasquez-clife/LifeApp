@@ -75,6 +75,28 @@
                     <TextView
                         android:layout_width="100dip"
                         android:layout_height="wrap_content"
+                        android:text="Vendedor"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/promdetNvendedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/textHighlight"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dip"
+                        android:layout_height="wrap_content"
                         android:text="Importe total"
                         android:textColor="@color/textHighlight"
                         android:textSize="12sp" />
@@ -82,7 +104,7 @@
                         android:id="@+id/promdetImporte"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="S/ 1,024.64"
+                        android:text="S/ 0.00"
                         android:textColor="@color/textSuccess"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -104,7 +126,7 @@
                         android:id="@+id/promdetSaldo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="S/ 128.32"
+                        android:text="S/ 0.00"
                         android:textColor="@color/textDanger"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -126,7 +148,7 @@
                         android:id="@+id/promdetFvence"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20-04-2019"
+                        android:text="-"
                         android:textColor="@color/textHighlight"
                         android:textSize="18sp"
                         android:textStyle="bold" />
